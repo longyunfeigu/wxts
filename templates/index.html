@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>第一步，扫码关注我</h3>
+    <img src="/static/0.jpg/" width="150px" height="150px">
+    <div><button onclick="getNextImage();">点我生成下一步的二维码</button></div>
+    <div id="app">
+        <h3>第二步，扫码确认信息</h3>
+    </div>
+
+
+</body>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery.qrcode.min.js"></script>
+<script>
+    function getNextImage() {
+        $.ajax({
+            url: '',
+            method: 'get',
+            success:function (ret) {
+                console.log(ret);
+            }
+        })
+    }
+
+</script>
+
+
+</html>
